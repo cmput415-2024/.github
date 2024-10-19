@@ -5,9 +5,6 @@
     "categories": [
         "C++",
 	"testing"
-    ],
-    "filePatterns": [
-        "CMakeLists.txt"
     ]
 }
 
