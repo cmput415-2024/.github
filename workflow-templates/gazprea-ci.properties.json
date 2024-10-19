@@ -1,0 +1,13 @@
+{
+    "name": "CMPUT 415 - Gazprea CI/CD",
+    "description": "Gazprea CI/CD template.",
+    "iconName": "gazprea",
+    "categories": [
+        "C++",
+	"testing"
+    ],
+    "filePatterns": [
+        "CMakeLists.txt"
+    ]
+}
+

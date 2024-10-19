@@ -1,0 +1,28 @@
+name: 415 CI/CD
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+jobs:
+  build-and-test:
+    runs-on: gazprea
+    container: technomancernc/cmput-415:gaz24
+
+    steps:
+      - name: Checkout Code
+        uses: action/checkout@v4
+    
+      - name: Build executable
+        run: |
+          mkdir -p build
+          cd build
+          cmake ..
+          make
+
+      - name: Test executable
+        working-directory: tests
+        run: |
+          dragon-runner CIConfig.json
